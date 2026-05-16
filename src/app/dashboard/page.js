@@ -38,6 +38,7 @@ export default function Dashboard() {
   if (loading) {
 
     return (
+
       <main className="min-h-screen bg-[#020617] flex items-center justify-center text-white">
 
         <h1 className="text-4xl font-bold">
@@ -45,6 +46,7 @@ export default function Dashboard() {
         </h1>
 
       </main>
+
     );
 
   }
@@ -62,26 +64,16 @@ export default function Dashboard() {
         {/* Header */}
         <div
           id="dashboard"
-          className="flex flex-col md:flex-row md:items-center md:justify-between gap-6"
+          className="flex flex-col gap-4"
         >
 
-          <div>
+          <h1 className="text-5xl font-bold">
+            Farmer Dashboard
+          </h1>
 
-            <h1 className="text-5xl font-bold">
-              Farmer Dashboard
-            </h1>
-
-            <p className="mt-4 text-gray-300 text-lg">
-              AI-powered agricultural monitoring and analytics platform.
-            </p>
-
-          </div>
-
-          <button className="bg-green-600 hover:bg-green-700 transition px-6 py-3 rounded-2xl font-semibold shadow-lg whitespace-nowrap">
-
-            Generate Report
-
-          </button>
+          <p className="text-gray-300 text-lg">
+            AI-powered agricultural monitoring and analytics platform.
+          </p>
 
         </div>
 
@@ -127,83 +119,76 @@ export default function Dashboard() {
         </div>
 
         {/* Weather */}
-        <div id="weather" className="mt-12">
+        <div
+          id="weather"
+          className="mt-12 scroll-mt-32"
+        >
+
           <WeatherCard />
+
         </div>
 
         {/* Analytics */}
         <div className="mt-12">
+
           <AnalyticsChart />
+
         </div>
 
         {/* AI Tools */}
         <div className="grid xl:grid-cols-2 gap-10 mt-12">
 
-          <div id="crop">
+          <div
+            id="crop"
+            className="scroll-mt-32"
+          >
+
             <CropRecommendation />
+
           </div>
 
-          <div id="disease">
+          <div
+            id="disease"
+            className="scroll-mt-32"
+          >
+
             <DiseaseDetection />
+
           </div>
 
         </div>
 
         {/* AI Assistant */}
-        <div id="assistant" className="mt-12">
+        <div
+          id="assistant"
+          className="mt-12 scroll-mt-32"
+        >
+
           <AIAssistant />
+
         </div>
 
         {/* Market Prices */}
-        <div id="market" className="mt-12">
+        <div
+          id="market"
+          className="mt-12 scroll-mt-32"
+        >
+
           <MarketPrices />
+
         </div>
 
         {/* Recommendation History */}
         <div className="mt-12">
+
           <RecommendationHistory />
+
         </div>
-
-        {/* Footer */}
-        <footer className="bg-green-900 mt-20 rounded-3xl p-10">
-
-          <div className="flex flex-col md:flex-row justify-between gap-10">
-
-            <div>
-
-              <h2 className="text-4xl font-bold text-white">
-                AgriNova
-              </h2>
-
-              <p className="mt-4 text-gray-200 text-lg max-w-md">
-                Smart agriculture powered by AI technology.
-              </p>
-
-            </div>
-
-            <div className="flex gap-8 text-lg">
-
-              <a href="/" className="hover:text-green-300 transition">
-                Home
-              </a>
-
-              <a href="/about" className="hover:text-green-300 transition">
-                About
-              </a>
-
-              <a href="/dashboard" className="hover:text-green-300 transition">
-                Dashboard
-              </a>
-
-            </div>
-
-          </div>
-
-        </footer>
 
       </section>
 
     </main>
 
   );
+
 }

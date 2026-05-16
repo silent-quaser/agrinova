@@ -38,26 +38,31 @@ export default function DashboardSidebar() {
 
   return (
 
-    <aside className="
-      w-72
-      bg-[#020617]
-      border-r
-      border-gray-800
-      p-6
-      sticky
-      top-0
-      h-screen
-    ">
+    <aside
+      className="
+        w-72
+        bg-[#020617]
+        border-r
+        border-gray-800
+        p-6
+        sticky
+        top-24
+        h-screen
+      "
+    >
 
-      <h1 className="text-4xl font-bold text-green-400">
+      {/* Logo */}
+      <h1 className="text-5xl font-bold text-green-400">
         AgriNova
       </h1>
 
-      <p className="text-gray-400 mt-3">
+      {/* Subtitle */}
+      <p className="text-gray-400 mt-4 text-lg">
         Smart Agriculture Platform
       </p>
 
-      <div className="space-y-4 mt-10">
+      {/* Navigation */}
+      <div className="space-y-5 mt-12">
 
         {menuItems.map((item) => (
 
@@ -73,7 +78,7 @@ export default function DashboardSidebar() {
               py-4
               rounded-2xl
               text-white
-              text-lg
+              text-xl
               font-semibold
             "
           >
