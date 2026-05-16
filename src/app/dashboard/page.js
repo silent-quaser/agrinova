@@ -50,16 +50,20 @@ export default function Dashboard() {
   }
 
   return (
+
     <main className="flex bg-[#0f172a] min-h-screen text-white">
 
       {/* Sidebar */}
       <DashboardSidebar />
 
       {/* Main Content */}
-      <section className="flex-1 p-6 md:p-10 overflow-y-auto">
+      <section className="flex-1 p-6 md:p-10 overflow-y-auto pt-24">
 
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div
+          id="dashboard"
+          className="flex flex-col md:flex-row md:items-center md:justify-between gap-6"
+        >
 
           <div>
 
@@ -73,7 +77,7 @@ export default function Dashboard() {
 
           </div>
 
-          <button className="bg-green-600 hover:bg-green-700 transition px-6 py-3 rounded-2xl font-semibold shadow-lg">
+          <button className="bg-green-600 hover:bg-green-700 transition px-6 py-3 rounded-2xl font-semibold shadow-lg whitespace-nowrap">
 
             Generate Report
 
@@ -123,33 +127,83 @@ export default function Dashboard() {
         </div>
 
         {/* Weather */}
-        <div className="mt-12">
+        <div id="weather" className="mt-12">
           <WeatherCard />
         </div>
 
-        {/* Analytics Chart */}
-        <AnalyticsChart />
+        {/* Analytics */}
+        <div className="mt-12">
+          <AnalyticsChart />
+        </div>
 
         {/* AI Tools */}
         <div className="grid xl:grid-cols-2 gap-10 mt-12">
 
-          <CropRecommendation />
+          <div id="crop">
+            <CropRecommendation />
+          </div>
 
-          <DiseaseDetection />
+          <div id="disease">
+            <DiseaseDetection />
+          </div>
 
         </div>
 
         {/* AI Assistant */}
-        <AIAssistant />
+        <div id="assistant" className="mt-12">
+          <AIAssistant />
+        </div>
 
         {/* Market Prices */}
-        <MarketPrices />
+        <div id="market" className="mt-12">
+          <MarketPrices />
+        </div>
 
         {/* Recommendation History */}
-        <RecommendationHistory />
+        <div className="mt-12">
+          <RecommendationHistory />
+        </div>
+
+        {/* Footer */}
+        <footer className="bg-green-900 mt-20 rounded-3xl p-10">
+
+          <div className="flex flex-col md:flex-row justify-between gap-10">
+
+            <div>
+
+              <h2 className="text-4xl font-bold text-white">
+                AgriNova
+              </h2>
+
+              <p className="mt-4 text-gray-200 text-lg max-w-md">
+                Smart agriculture powered by AI technology.
+              </p>
+
+            </div>
+
+            <div className="flex gap-8 text-lg">
+
+              <a href="/" className="hover:text-green-300 transition">
+                Home
+              </a>
+
+              <a href="/about" className="hover:text-green-300 transition">
+                About
+              </a>
+
+              <a href="/dashboard" className="hover:text-green-300 transition">
+                Dashboard
+              </a>
+
+            </div>
+
+          </div>
+
+        </footer>
 
       </section>
 
     </main>
+
   );
 }
