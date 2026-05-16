@@ -13,7 +13,7 @@ export default function RecommendationHistory() {
       try {
 
         const response = await fetch(
-          "http://localhost:5000/api/recommendations"
+          "https://agrinova-backend-bds6.onrender.com/api/recommendations"
         );
 
         const data = await response.json();

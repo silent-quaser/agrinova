@@ -18,7 +18,7 @@ export default function CropRecommendation() {
       setLoading(true);
 
       const response = await fetch(
-        "http://localhost:5000/api/recommend",
+        "https://agrinova-backend-bds6.onrender.com/api/recommend",
         {
           method: "POST",
 

@@ -24,7 +24,7 @@ export default function Signup() {
       setMessage("");
 
       const response = await fetch(
-        "http://localhost:5000/api/register",
+        "https://agrinova-backend-bds6.onrender.com/api/register",
         {
           method: "POST",
 

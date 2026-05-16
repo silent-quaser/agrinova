@@ -34,7 +34,7 @@ export default function AIAssistant() {
     try {
 
       const response = await fetch(
-        "http://localhost:5000/api/ai-assistant",
+        "https://agrinova-backend-bds6.onrender.com/api/ai-assistant",
         {
           method: "POST",
 

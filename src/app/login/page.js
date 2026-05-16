@@ -23,7 +23,7 @@ export default function Login() {
       setMessage("");
 
       const response = await fetch(
-        "http://localhost:5000/api/login",
+        "https://agrinova-backend-bds6.onrender.com/api/login",
         {
           method: "POST",
 
